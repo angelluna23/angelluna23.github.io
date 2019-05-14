@@ -1,6 +1,6 @@
 body {
     background-image: url('images/background.jpg');
-    color: #0fff02;
+    color: #abffa3;
     background-size: cover;
     text-align: left;
     vertical-align: bottom;
@@ -10,8 +10,8 @@ body {
     color: #ff0000;
 }
 .button {
-    background-color: #0cd902;
-    border: 2px solid #0cd902;
+    background-color: #1fb301;
+    border: 2px solid #1fb301;
     color: white;
     padding:5px;
     text-align: center;
