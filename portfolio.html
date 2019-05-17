@@ -16,9 +16,47 @@
         <a target="_blank" href="https://scratch.mit.edu">
             <img src="images/scratch.jpg" height="100">
         <br>    
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xg-58kJmXKU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1k8afpJI-JY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/tXFw5hBX6lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </a></center>
-    </body>
+        <center> 
+
+<a href="javascript:switchTab('tb_1', 'content_1');" id="tb_1" class="tabmenu active"><button>Computer Science</button></a>
+<a href="javascript:switchTab('tb_2', 'content_2');" id="tb_2" class="tabmenu"><button>Biology</button></button></a>
+<a href="javascript:switchTab('tb_3', 'content_3');" id="tb_3" class="tabmenu"><button>English</button></a>
+
+</center>
+
+<div id="content_1" class="tabcontent"> 
+<p>This was a video I made for my computer science class. The video was made to show off what we have coded in class.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Xg-58kJmXKU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+</div> 
+<div id="content_2" class="tabcontent" style="display:none;">
+<p>This is a video I directed and edited for my Biology project. The project was about cancer and everything about it. We got Feline Leukemia for our project</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/1k8afpJI-JY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+</div>
+<div id="content_3" class="tabcontent" style="display:none;">
+<p>This video is a project about a social justice. We chose Injustice and Unfairness and made a PSA about it for our class.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tXFw5hBX6lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+</div>
+
+</body>
+
+<script>
+function switchTab(tab_id, tab_content) {
+// first of all we get all tab content blocks (I think the best way to get them by class names)
+var x = document.getElementsByClassName("tabcontent");
+var i;
+for (i = 0; i < x.length; i++) {
+x[i].style.display = 'none'; // hide all tab content
+}
+document.getElementById(tab_content).style.display = 'block'; // display the content of the tab we need
+
+// now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+var x = document.getElementsByClassName("tabmenu");
+var i;
+for (i = 0; i < x.length; i++) {
+x[i].className = 'tabmenu'; 
+}
+document.getElementById(tab_id).className = 'tm_active';
+}
+</script>
+
 </html>
